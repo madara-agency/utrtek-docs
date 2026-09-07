@@ -1,25 +1,28 @@
 ---
 title: "I template email"
-description: "I 10 modelli di email automatiche del sistema"
+description: "I 14 modelli di email automatiche del sistema"
 ---
 
 UTRtek invia **email automatiche** in momenti precisi del ciclo di vita di PIK, corsi e utenti. Ogni email usa un **template** predefinito che gli amministratori possono personalizzare.
 
-## I 10 template
+## I 14 template
 
 | # | Nome | Quando viene inviata |
 |---|------|---------------------|
 | 1 | **Creazione PIK** | Quando viene emessa una nuova PIK Card |
-| 2 | **Richiesta iscrizione istruttore** | L'allievo chiede l'iscrizione a un corso |
-| 3 | **Conferma iscrizione istruttore** | L'istruttore accetta l'iscrizione |
-| 4 | **Rifiuto iscrizione istruttore** | L'istruttore rifiuta l'iscrizione |
-| 5 | **Apertura corso** | Il corso viene avviato |
-| 6 | **Chiusura corso** | Il corso viene terminato |
-| 7 | **PIK in scadenza** | Mancano 30 giorni o meno alla scadenza |
-| 8 | **PIK scaduto** | La PIK non è più valida |
-| 9 | **Corso sospeso** | Il corso viene messo in pausa |
-| 10 | **Creazione utente** | Viene creato un nuovo account |
-| 11 | **Codice accesso pannello** | Login con il codice OTP via email |
+| 2 | **Conferma acquisto PIK sito** | Quando l'acquisto di una PIK dal sito va a buon fine |
+| 3 | **Richiesta iscrizione istruttore** | L'allievo chiede l'iscrizione a un corso |
+| 4 | **Conferma iscrizione istruttore** | L'istruttore accetta l'iscrizione |
+| 5 | **Conferma iscrizione amministratore** | L'amministratore conferma l'iscrizione |
+| 6 | **Rifiuto iscrizione istruttore** | L'istruttore rifiuta l'iscrizione |
+| 7 | **Apertura corso** | Il corso viene avviato |
+| 8 | **Chiusura corso** | Il corso viene terminato |
+| 9 | **PIK in scadenza** | Mancano 30 giorni o meno alla scadenza |
+| 10 | **Corso sospeso** | Il corso viene messo in pausa |
+| 11 | **Creazione utente** | Viene creato un nuovo account |
+| 12 | **PIK scaduto** | La PIK non è più valida |
+| 13 | **PIK rinnovato** | Quando viene creata la nuova carta rinnovata |
+| 14 | **Codice accesso pannello** | Login con il codice OTP via email |
 
 ## Come modificare un template
 
@@ -63,12 +66,6 @@ Non modificare i segnaposto a meno che tu non sappia cosa stai facendo: se li ri
 
 ## Chi riceve le email
 
-| Template | Destinatario tipico |
-|----------|---------------------|
-| Creazione PIK | Allievo o struttura acquirente |
-| Richiesta iscrizione | Istruttore assegnato |
-| Conferma / Rifiuto | Allievo e segreteria |
-| Apertura / Chiusura corso | Allievo |
-| PIK in scadenza / scaduto | Allievo e/o struttura |
-| Creazione utente | Nuovo utente |
-| Codice accesso | Chi sta facendo il login |
+I destinatari **non** sono sempre “l'allievo”. Dipende dall'evento (acquirente, istruttore, chi ha cliccato, amministratori in campanella).
+
+La tabella completa è in [Notifiche: email e campanella](/email/notifiche).

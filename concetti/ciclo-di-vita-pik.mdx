@@ -98,6 +98,8 @@ Questo è il cuore del percorso didattico. Ogni passaggio ha un responsabile e, 
 | Riprendi | Istruttore/Admin | Sospeso → **Aperto** | — |
 | Chiudi corso | Istruttore/Admin | Aperto → **Concluso** (con esito) | Chiusura corso |
 
+Allievo, istruttore e acquirente ricevono le email di iscrizione/apertura/chiusura/sospensione, tranne chi ha eseguito l'azione. Dettaglio: [Notifiche](/email/notifiche).
+
 <Note>
   L'**amministratore** può confermare direttamente una PIK senza passare dall'accettazione dell'istruttore.
 </Note>
@@ -149,8 +151,8 @@ Ogni giorno il sistema controlla le PIK in scadenza e agisce da solo:
 
 | Situazione | Cosa fa il sistema |
 |------------|--------------------|
-| Mancano **30 giorni o meno** | Invia l'email **PIK in scadenza** |
-| La data di scadenza **è passata** | Porta la PIK a **Scaduta** e invia l'email **PIK scaduto** |
+| Mancano **30 giorni o meno** | Email **PIK in scadenza** all'allievo + campanella allievo e admin |
+| La data di scadenza **è passata** | Porta la PIK a **Scaduta**, email **PIK scaduto** a allievo/istruttore/acquirente + campanella admin |
 
 Non serve alcun intervento manuale per questi promemoria.
 

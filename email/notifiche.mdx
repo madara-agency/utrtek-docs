@@ -1,0 +1,49 @@
+---
+title: "Notifiche: email e campanella"
+description: "Chi riceve email, campanella e avvisi in pannello per ogni evento"
+---
+
+UTRtek avvisa in **quattro modi**. Non sono intercambiabili.
+
+| Canale | Dove lo vedi | Chi lo riceve |
+|--------|----------------|---------------|
+| **Email** | Casella di posta | Destinatari della tabella sotto |
+| **Campanella** | Icona campanella in alto a destra nel pannello | Stessi destinatari dell'email, più (in alcuni casi) gli amministratori |
+| **Toast** | Messaggio che sparisce dopo un'azione nel pannello | Solo **chi ha cliccato** l'azione, e solo se è loggato nel pannello |
+| **Alert admin** | Campanella degli amministratori / permesso PIK admin | Segreteria, in più rispetto all'allievo/istruttore |
+
+Non puoi disattivare i singoli canali dal tuo profilo. Gli amministratori tecnici possono spegnere mail o campanella a livello di sistema.
+
+## Ciclo di vita PIK
+
+| Evento | Email (template) | Campanella | Toast | Alert admin | Destinatari email/campanella |
+|--------|------------------|------------|-------|-------------|------------------------------|
+| Emissione PIK | Creazione PIK | sì | no | no | Acquirente e istruttore. L'allievo solo se è anche acquirente o istruttore |
+| Assegnazione automatica | Creazione PIK | sì | no | no | Solo allievo |
+| Richiesta iscrizione | Richiesta iscrizione istruttore | sì | sì | no | Allievo, istruttore e acquirente. Se chi clicca è uno di loro, **non** riceve campanella/email per questa azione |
+| Apertura / chiusura / sospensione | Apertura corso / Chiusura corso / Corso sospeso | sì | sì | no | Stesso gruppo (allievo + istruttore + acquirente, meno chi ha cliccato) |
+| Ripresa corso / PIK stampata | nessuna | sì | sì | no | Stesso gruppo, solo campanella |
+| Vecchia PIK sostituita da rinnovo | nessuna | no | no | no | — |
+| PIK scaduta (job giornaliero) | PIK scaduto | sì | no | sì | Allievo, istruttore e acquirente (meno eventuale actor in sessione) + campanella admin |
+| PIK rinnovata (nuova carta) | PIK rinnovato | sì | sì | no | Allievo, istruttore e acquirente (meno chi ha cliccato) |
+| Istruttore accetta | Conferma iscrizione istruttore | sì | sì | no | Allievo e istruttore (anche chi ha accettato). Non l'acquirente |
+| Istruttore rifiuta | Rifiuto iscrizione istruttore | sì | sì | sì | Allievo e istruttore che ha rifiutato + campanella admin |
+| Admin conferma iscrizione | Conferma iscrizione amministratore | sì | sì | no | Allievo e istruttore |
+| Promemoria 30 giorni | PIK in scadenza | sì | no | sì | Allievo + campanella admin |
+
+Il **toast** compare solo durante un'azione nel pannello (non nei job notturni e non se crei la PIK dal form di creazione).
+
+## Altre email (non PIK)
+
+| Evento | Email | Campanella |
+|--------|-------|------------|
+| Creazione utente | Creazione utente (se attiva) | no |
+| Codice accesso pannello | Codice accesso pannello | no |
+| Acquisto PIK dal sito, pagamento ok | Conferma acquisto PIK sito | no |
+| Form contatti del sito | Messaggio grezzo alla casella supporto, **senza** template | no |
+
+Il form contatti non compare nello [storico invii](/email/storico-invii) come gli altri template.
+
+<Tip>
+  Per modificare il testo delle email usa [I template email](/email/template). La campanella non è modificabile dal pannello.
+</Tip>

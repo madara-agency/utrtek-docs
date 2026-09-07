@@ -100,14 +100,16 @@ Se il corso deve essere messo in pausa:
   </Step>
 </Steps>
 
-## Riepilogo email automatiche
+## Riepilogo email e campanella
 
-| Momento | Email inviata |
-|---------|---------------|
-| Emissione PIK | Creazione PIK |
-| Richiesta iscrizione | Richiesta iscrizione istruttore |
-| Istruttore accetta | Conferma iscrizione |
-| Istruttore rifiuta | Rifiuto iscrizione |
-| Corso aperto | Apertura corso |
-| Corso sospeso | Corso sospeso |
-| Corso chiuso | Chiusura corso |
+I destinatari esatti (chi è escluso se ha cliccato, chi riceve solo la campanella) sono in [Notifiche](/email/notifiche).
+
+| Momento | Email | Note |
+|---------|-------|------|
+| Emissione PIK | Creazione PIK | Acquirente e istruttore |
+| Richiesta iscrizione | Richiesta iscrizione istruttore | Allievo, istruttore e acquirente |
+| Istruttore accetta | Conferma iscrizione | Allievo e istruttore |
+| Istruttore rifiuta | Rifiuto iscrizione | Allievo, istruttore, più campanella admin |
+| Admin conferma | Conferma iscrizione amministratore | Allievo e istruttore |
+| Corso aperto / sospeso / chiuso | template corrispondente | Allievo, istruttore e acquirente |
+| Corso ripreso / PIK stampata | nessuna | Solo campanella |

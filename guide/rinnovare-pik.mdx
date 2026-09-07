@@ -62,14 +62,16 @@ Per rinnovare tutte le PIK idonee di un utente in un colpo solo:
 
 ## Promemoria automatici
 
-Il sistema controlla **ogni giorno** le PIK in scadenza e invia email automatiche:
+Il sistema controlla **ogni giorno** le PIK in scadenza e invia notifiche automatiche:
 
-| Situazione | Email |
-|------------|-------|
-| Mancano 30 giorni o meno alla scadenza | **PIK in scadenza** |
-| La PIK è già scaduta | **PIK scaduto** |
+| Situazione | Cosa fa il sistema |
+|------------|--------------------|
+| Mancano **30 giorni o meno** | Email **PIK in scadenza** all'allievo + campanella allievo e admin |
+| La data di scadenza **è passata** | Porta la PIK a **Scaduta**, email **PIK scaduto** a allievo/istruttore/acquirente + campanella admin |
 
 Non devi fare nulla manualmente per questi promemoria: partono da soli.
+
+Il rinnovo della nuova carta invia l'email **PIK rinnovato** ad allievo, istruttore e acquirente. La vecchia carta sostituita **non** invia email.
 
 <Tip>
   Consulta lo storico rinnovi in **Didattica e PIK → Rinnovi** per vedere tutte le operazioni passate.

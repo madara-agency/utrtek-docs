@@ -79,6 +79,7 @@
       {
         "group": "Email e comunicazioni",
         "pages": [
+          "email/notifiche",
           "email/template",
           "email/storico-invii"
         ]
