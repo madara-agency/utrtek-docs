@@ -43,7 +43,7 @@ flowchart TD
 
     C --> D["Da confermare<br/>(istruttore assegnato)"]
     D -->|Istruttore accetta| E["Confermato"]
-    D -->|Istruttore rifiuta| R["Concluso + Non promosso"]
+    D -->|Istruttore rifiuta| C
     E --> F["Aperto<br/>(corso in corso)"]
     F -->|Sospendi| S["Sospeso"]
     S -->|Riprendi| F
@@ -57,6 +57,10 @@ flowchart TD
     Y --> V2["Nuova PIK Attiva"]
 ```
 
+<Note>
+  Se l'istruttore **rifiuta**, la PIK **non si chiude**: torna a **Creato** senza istruttore, così si può riassegnare. L'esito **Non promosso** si usa solo alla chiusura del corso.
+</Note>
+
 ## Fase 1 — Come nasce una PIK
 
 Ci sono **due modi** in cui una PIK entra nel sistema.
@@ -66,6 +70,8 @@ Ci sono **due modi** in cui una PIK entra nel sistema.
 La segreteria (o chi ha il permesso) **emette** una PIK collegando allievo, corso ed eventuale istruttore/struttura. La carta nasce in stato **Creato** e riceve subito un **numero univoco**.
 
 Vedi la guida: [Emettere una PIK](/guide/emettere-pik).
+
+L'allievo può anche **acquistare la PIK sul sito**. Prima del pagamento indica (tutti opzionali) istruttore, training facility e dati per l'eventuale fattura. Dopo il pagamento la PIK nasce **Acquistata** in stato **Creato**; se c'è un istruttore parte subito la richiesta di accettazione.
 
 ### B. Assegnazione automatica (brevetto già acquisito)
 

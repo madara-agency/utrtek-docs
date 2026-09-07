@@ -10,7 +10,8 @@ Dopo l'emissione di una PIK, il corso segue un **percorso** con diversi passaggi
 ```
 Emissione PIK → Da confermare → Confermato → Aperto → Concluso
                      ↓
-               (se rifiutato)
+               rifiuto: torna a Creato
+               (istruttore rimosso, stessa PIK)
 ```
 
 ---
@@ -18,6 +19,8 @@ Emissione PIK → Da confermare → Confermato → Aperto → Concluso
 ## Parte 1: Accettare o rifiutare l'iscrizione
 
 **Chi lo fa:** l'istruttore assegnato (o un amministratore).
+
+Se l'allievo sceglie l'istruttore già nella pagina pre-pagamento sul sito, la richiesta parte in automatico dopo il pagamento. Può anche indicare la **training facility** a cui collegare il brevetto e i dati per l'eventuale fattura. Altrimenti istruttore e centro si assegnano dalla PIK nel pannello.
 
 <Steps>
   <Step title="Ricevi l'email">
@@ -32,7 +35,7 @@ Emissione PIK → Da confermare → Confermato → Aperto → Concluso
     Usa l'azione **"Accetta o rifiuta corso"** (o simile).
 
     - **Accetta** → la PIK passa a **"Confermato"** e parte l'email di conferma
-    - **Rifiuta** → parte l'email di rifiuto; per riprovare serve una nuova richiesta
+    - **Rifiuta** → la PIK torna a **"Creato"**, l'istruttore viene rimosso e parte l'email di rifiuto. Si può riassegnare un altro istruttore sulla **stessa** PIK.
   </Step>
 </Steps>
 
@@ -58,7 +61,7 @@ Emissione PIK → Da confermare → Confermato → Aperto → Concluso
   </Step>
 
   <Step title="Credenziali myutrtek.com">
-    Entro 24 ore l'allievo riceve (dalla segreteria) le credenziali per accedere a **myutrtek.com** e studiare il materiale.
+    All'apertura il sistema iscrive l'allievo a **myutrtek.com** se il corso ha un ID Moodle. Se il materiale non compare, contatta la segreteria.
   </Step>
 </Steps>
 

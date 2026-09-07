@@ -12,7 +12,7 @@ Pensa a una PIK Card come a un **tessera con un codice univoco** che collega ins
 - L'**allievo** che deve fare il corso
 - Il **corso** scelto (es. "Open Water Diver")
 - L'**istruttore** che lo seguirà
-- Eventualmente la **struttura formativa** che ha acquistato la PIK
+- Eventualmente la **struttura formativa** (scelta all'acquisto sul sito, o se il centro ha comprato la PIK)
 
 Ogni PIK ha un **numero univoco** (codice PIK) che la identifica nel sistema.
 
@@ -56,7 +56,7 @@ Indica se la **carta è ancora valida**:
 ```
 Emissione → Da confermare → Confermato → Aperto → Concluso
                 ↓
-            (se rifiutato: email di rifiuto)
+            (rifiuto: torna a Creato, si riassegna l'istruttore)
 ```
 
 Se il corso è **rinnovabile**, alla scadenza si può creare una **nuova PIK** con validità prolungata.
@@ -67,7 +67,7 @@ Se il corso è **rinnovabile**, alla scadenza si può creare una **nuova PIK** c
 
 ## Collegamento con myutrtek.com
 
-Quando un corso viene **aperto**, l'allievo riceve (via email dalla segreteria) le credenziali per accedere a **myutrtek.com**, dove trova il materiale didattico del corso.
+Quando un corso viene **aperto**, il sistema iscrive l'allievo a **myutrtek.com** (se il corso è collegato a Moodle). Se il materiale non compare, la segreteria può verificare l'iscrizione.
 
 <Card title="Come emettere una PIK" icon="plus" href="/guide/emettere-pik">
   Guida passo passo per la segreteria.
