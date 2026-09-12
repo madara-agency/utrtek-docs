@@ -1,0 +1,62 @@
+---
+title: "Il listino PIK"
+description: "Cosa comprende il prezzo di un corso e le 7 fasce standard"
+---
+
+Il prezzo che vedi nella scheda di un corso, nel pannello e su utrtek.it, è **solo il prezzo del PIK**: il kit didattico con accesso a myUTRtek, materiale, esami e certificazione finale (eCard o badge).
+
+Il corso in acqua (teoria in aula, immersioni previste dagli standard, logistica) si concorda con l'istruttore UTRtek e **non ha un prezzo nel sistema**. Gas, barca, noleggio attrezzature e lezioni extra sono sempre esclusi.
+
+<Warning>
+  Non inserire mai nel campo **Prezzo** il costo del corso in acqua o un prezzo "di listino centro". Il campo vale in centesimi: 4000 significa 40,00 €.
+</Warning>
+
+## Le fasce standard
+
+Per semplificare la gestione, i prezzi PIK seguono **7 fasce fisse** più un listino separato per Staff e Trainer. Ogni corso sta in una sola fascia; un corso nuovo va messo nella fascia del suo livello, non a un prezzo libero.
+
+| Fascia | PIK | Chi ci sta |
+|--------|-----|-----------|
+| **F1** | 20 € | Discovery e Junior Mermaid, Mermaid, Snorkeling, Apnea Indoor; PIK istruttore "add-on" (Hogarthian, Trim & Buoyancy, Intro to Basic Skills, Night, Navigation, Video) |
+| **F2** | 30 € | Specialità ricreative (Hogarthian, Trim & Buoyancy, Dry Suit, Night, REC Wreck, Navigation, Altitude, Video, scientifici), Apnea 1° e 2° Level, BLS & RCP, Oxygen Provider, Scooter REC e TEK, Scuba Kid Diver, Dry Suit Instructor |
+| **F3** | 40 € | Brevetti ricreativi base: Open Water, Junior, Passport, Advanced, Sidemount, Nitrox, Rescue, Multilevel Deep 40, Deco Deep, Cavern, Mnemonic 1° Level A; Nitrox e REC Wreck Instructor, Snorkeling Guide |
+| **F4** | 50 € | ADV Deco Deep, Helitrox, Overhead Protocol, Cave 1, Wreck Explorer, Long Range 1, Extended Range, Mnemonic 2°-5° Level, Blender Operator; tutti gli Specialty Instructor (Deco Deep, ADV Deco Deep, Helitrox, Scooter, scientifici, Altitude, Adapted Divers, Sidemount) |
+| **F5** | 70 € | Cancello tecnico e primi livelli: Technical Correctly Diver (Pass-Tek), TEK Air, TEK 1, Heliair 75, Cave 2, Rebreather, ADV e TEK Long Range, TEK 3 e PRO Specialty, i 4 Divemaster, Correctly Instructor e Instructor Wreck/Blender/Long Range |
+| **F6** | 90 € | TEK 2, TEK 3, Cave 3, Extended Long Range, Medical Scuba Diver; Apnea e Mermaid Instructor; Overhead, Cave, Full Cave, Technical Cave, TEK 1 ed Extended Range Instructor |
+| **F7** | 150 € | Professional Trimix Diver; Heliair, ADV Heliair, TEK 2, TEK 3 e Professional Trimix Instructor; Technical Correctly Trainer |
+
+### Staff e Trainer
+
+I PIK professionali di livello Staff e Trainer non entrano nelle fasce, perché una fascia unica li schiaccerebbe. Hanno un listino a tre valori:
+
+| PIK | Corsi |
+|-----|-------|
+| 200 € | REC Staff Instructor, TEK Staff Instructor, TEK Air Trainer |
+| 300 € | REC Trainer, TEK 2 Trimix Trainer, TEK 3 Trimix Trainer, Cave Trainer |
+| 450 € | Professional Trimix Trainer |
+
+## Regole pratiche
+
+- **Un corso, una fascia.** Se un corso sale di livello (per esempio da specialità a livello tecnico), cambia fascia; non si creano valori intermedi.
+- **Stessa fascia per Back Mount e Side Mount.** La configurazione non cambia il prezzo del PIK.
+- **PIK integrati** (più certificazioni in un solo acquisto, come Medical Scuba Diver o i pacchetti Mnemonic per non brevettati) restano casi a sé e vanno segnalati nella scheda.
+- **Corsi senza PIK a listino** (Instructor Qualification Course, cross-over, Assistant Instructor, Examiner) restano senza prezzo: la scheda sul sito invita a contattare la segreteria.
+- Le note sul corso in acqua vanno nel campo **Nota prezzo** della scheda sito, non nel prezzo.
+
+## Cosa succede sul sito
+
+Il sito utrtek.it legge il prezzo dal pannello e lo mostra come "Investimento". Il bottone **Aggiungi al carrello** compare solo per i corsi collegati a un prezzo Stripe (oggi i 15 corsi del percorso in evidenza); per tutti gli altri il visitatore vede il prezzo e un pulsante per richiedere il PIK.
+
+Nel checkout del carrello si può pagare **online** (carta o PayPal, tramite Stripe) oppure con **bonifico**. Il bonifico non emette subito la PIK: la segreteria conferma l'accredito in **Ordini sito** e solo allora parte l'emissione. Il tesseramento annuale resta solo con carta Stripe.
+
+<Warning>
+  Se cambi il prezzo di un corso acquistabile online, il prezzo Stripe va riallineato dal team tecnico (comando `website:sync-pik-stripe-prices`). Finché non viene fatto, il sito mostra il prezzo nuovo ma il pagamento incassa quello vecchio.
+</Warning>
+
+## Come si aggiornano i prezzi
+
+I prezzi di tutto il catalogo vivono in due file dati del CMS, gestiti dal team tecnico, e vengono scritti nel pannello con il comando `website:publish-course-catalog`. Modificare il prezzo a mano nel pannello funziona per un caso urgente, ma alla pubblicazione successiva il valore del file dati torna a prevalere: segnala sempre la modifica al team tecnico perché aggiorni il file.
+
+<Card title="Gestire i corsi" icon="graduation-cap" href="/guide/gestire-corsi">
+  Dove si trova il campo Prezzo e la scheda sito di un corso.
+</Card>
