@@ -9,7 +9,7 @@ UTRtek invia **email automatiche** in momenti precisi del ciclo di vita di PIK, 
 
 | # | Nome | Quando viene inviata |
 |---|------|---------------------|
-| 1 | **Creazione PIK** | Quando viene emessa una nuova PIK Card |
+| 1 | **Creazione PIK** | Quando viene emessa una nuova PIK Card. Contiene il riepilogo, cosa succede dopo (istruttore, iscrizione, myutrtek.com) e il link per accedere al pannello. |
 | 2 | **Conferma acquisto PIK sito** | Quando l'acquisto di una PIK dal sito va a buon fine |
 | 3 | **Richiesta iscrizione istruttore** | L'allievo chiede l'iscrizione a un corso |
 | 4 | **Conferma iscrizione istruttore** | L'istruttore accetta l'iscrizione |
@@ -55,8 +55,11 @@ Nei template trovi dei **segnaposto** (testo tra `##`) che il sistema sostituisc
 |------------|-----------|
 | `##card.card_number##` | Numero della PIK |
 | `##card.course_name##` | Nome del corso |
-| `##card.instructor_full##` | Nome completo dell'istruttore |
+| `##card.formatted_buyer##` | Nome dell'acquirente (senza titolo) |
+| `##card.student_full##` | Nome dell'allievo (senza titolo) |
+| `##card.instructor_full##` | Nome dell'istruttore (senza titolo), se assegnato |
 | `##card.admin_edit_url##` | Link diretto alla PIK nel pannello |
+| `##user.name##` | Nome di battesimo del destinatario |
 
 Non modificare i segnaposto a meno che tu non sappia cosa stai facendo: se li rimuovi, l'email perderà informazioni importanti.
 
